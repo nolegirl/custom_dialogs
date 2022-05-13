@@ -1,5 +1,6 @@
 import 'package:custom_dialog/choice_dialog.dart';
 import 'package:custom_dialog/confirmation_dialog.dart';
+import 'package:custom_dialog/multiple_choice_dialog.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -132,7 +133,29 @@ class _MyHomePageState extends State<MyHomePage> {
                     });
               },
             ),
-
+            TextButton(
+              style: ButtonStyle(
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                    side: BorderSide(color: Colors.deepOrangeAccent),
+                    borderRadius: BorderRadius.circular(20),
+                  ))),
+              child: Text(
+                'Open multiple choice dialog',
+                style: TextStyle(color: Colors.deepOrangeAccent),
+                textAlign: TextAlign.left,
+              ),
+              onPressed: () {
+                showDialog(
+                    context: context,
+                    builder: (dialogContext) {
+                      return MultipleChoiceDialog(
+                        title: 'Confirm',
+                        message: 'Are you sure?',
+                        buttons: {'button1' : () {}, 'button2' : () {}, 'button3': () {}},
+                      );
+                    });
+              },
+            ),
           ],
         ),
       ),
