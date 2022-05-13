@@ -41,6 +41,12 @@ class ChoiceDialog extends StatelessWidget {
           Container(
             width: double.infinity,
             height: hasLink ? 40 : 1,
+            child: TextButton(
+              child: Text('View the Link', style: TextStyle(color: Colors.deepOrangeAccent, fontWeight: FontWeight.normal),),
+              onPressed: () {
+                //TODO: set up link opening
+              },
+            ),
           ),
           Container(
             width: double.infinity,
