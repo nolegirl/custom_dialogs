@@ -1,4 +1,5 @@
 import 'package:custom_dialog/choice_dialog.dart';
+import 'package:custom_dialog/confirmation_dialog.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -83,20 +84,53 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             TextButton(
-              child: Text('Open choice dialog'),
+              style: ButtonStyle(
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                    side: BorderSide(color: Colors.deepOrangeAccent),
+                    borderRadius: BorderRadius.circular(20),
+                  ))),
+              child: Text(
+                'Open confirmation dialog',
+                style: TextStyle(color: Colors.deepOrangeAccent),
+              ),
               onPressed: () {
-                showDialog(context: context, builder: (dialogContext) {
-                  return ChoiceDialog(
-                    title: 'This is a choice dialog',
-                    message: 'This is a message',
-                    firstButtonText: '1st',
-                    secondButtonText: '2nd',
-                    firstButtonOnPress: () {},
-                    secondButtonOnPress: () {},
-                  );
-                });
+                showDialog(
+                    context: context,
+                    builder: (dialogContext) {
+                      return ConfirmationDialog(
+                        title: 'THIS IS A CONFIRMATION DIALOG',
+                        message: 'THIS IS A MESSAGE',
+                        optionalOnPress: () {},
+                      );
+                    });
               },
-            )
+            ),
+            TextButton(
+              style: ButtonStyle(
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                side: BorderSide(color: Colors.deepOrangeAccent),
+                borderRadius: BorderRadius.circular(20),
+              ))),
+              child: Text(
+                'Open choice dialog',
+                style: TextStyle(color: Colors.deepOrangeAccent),
+              ),
+              onPressed: () {
+                showDialog(
+                    context: context,
+                    builder: (dialogContext) {
+                      return ChoiceDialog(
+                        title: 'This is a choice dialog',
+                        message: 'This is a message',
+                        firstButtonText: '1st',
+                        secondButtonText: '2nd',
+                        firstButtonOnPress: () {},
+                        secondButtonOnPress: () {},
+                      );
+                    });
+              },
+            ),
+
           ],
         ),
       ),
