@@ -125,6 +125,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         message: 'This is a message',
                         firstButtonText: '1st',
                         secondButtonText: '2nd',
+                        link: '',
                         firstButtonOnPress: () {},
                         secondButtonOnPress: () {},
                       );

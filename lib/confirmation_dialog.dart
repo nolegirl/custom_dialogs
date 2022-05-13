@@ -20,11 +20,12 @@ class ConfirmationDialog extends StatelessWidget {
       ),
       content: Column(
         mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             message ?? '', style: TextStyle(color: Colors.grey[500], fontSize: 12),
           ),
-          SizedBox(height: 10,),
+          SizedBox(height: 20,),
           Container(
             width: double.infinity ,
               child: TextButton(
