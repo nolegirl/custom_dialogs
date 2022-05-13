@@ -25,9 +25,11 @@ class ChoiceDialog extends StatelessWidget {
       ),
       title: Text(
         title ?? '',
+        style: TextStyle(color: Colors.grey[900], fontSize: 16),
       ),
       content: Text(
         message ?? '',
+        style: TextStyle(color: Colors.grey[500], fontSize: 12),
       ),
       actions: [
         TextButton(

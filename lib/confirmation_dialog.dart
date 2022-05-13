@@ -16,13 +16,13 @@ class ConfirmationDialog extends StatelessWidget {
           borderRadius: BorderRadius.circular(20)
       ),
       title: Text(
-        title ?? '',
+        title ?? '', style: TextStyle(color: Colors.grey[900], fontSize: 16),
       ),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            message ?? '',
+            message ?? '', style: TextStyle(color: Colors.grey[500], fontSize: 12),
           ),
           SizedBox(height: 10,),
           Container(

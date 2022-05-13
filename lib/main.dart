@@ -92,14 +92,15 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text(
                 'Open confirmation dialog',
                 style: TextStyle(color: Colors.deepOrangeAccent),
+                textAlign: TextAlign.left,
               ),
               onPressed: () {
                 showDialog(
                     context: context,
                     builder: (dialogContext) {
                       return ConfirmationDialog(
-                        title: 'THIS IS A CONFIRMATION DIALOG',
-                        message: 'THIS IS A MESSAGE',
+                        title: 'Confirm',
+                        message: 'Are you sure?',
                         optionalOnPress: () {},
                       );
                     });
